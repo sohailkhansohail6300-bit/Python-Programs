@@ -1,0 +1,41 @@
+employe=[]
+print("Welcome to Employee Management System")
+while True:
+    print('if you want to add employee details press 1 ')
+    print('if you want to view all employee details press 2 ')
+    print('if you want to search employee details press 3 ')
+    print('if you want to delete employee details press 4 ')
+    print('if you want to exit press')
+    choice=int(input("Enter your choice: "))
+    if choice==1:
+        name=input('Enter Employ Name: ')
+        Emp_id=int(input('Enter Employ id: '))
+        salary=float(input('Enter Employ Salary: '))
+        data={
+            'name': name,
+            'id': Emp_id,
+            'salary': salary
+        }
+        employe.append(data)
+        print('Employ is added successfully')
+    elif choice==2:
+        for i in employe:
+            print(i)
+    elif choice==3:
+        search=int(input('Enter your employ id: '))
+        for i in employe:
+            if i['id']==search:
+                print(i)
+                break
+            else:
+                print('employ not Found')
+    elif choice==4:
+        dele=int(input('Enter Employ id: '))
+        for i in employe:
+            if i['id']==dele:
+                employe.remove(i)
+                print('Employ is deleted successfully')
+
+    elif choice==5:
+        print('Thank you for using Employee Management System')
+        break
