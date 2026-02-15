@@ -1,0 +1,40 @@
+#here we calculate the tax and discount for the products
+
+products=[]
+
+while True:
+    print('here you can calculate the tax and discount of the products')
+    print('Press 1 to add the products details')
+    print('Press 2 to check the tax and discount of products ')
+    print('Press 3 to exit \n')
+
+    choice=int(input('Enter your choice : '))
+    if choice==1:
+        Product_name=input("Enter Product Name :")
+        price=float(input('enter product price :'))
+        stock=int(input('Enter product stock \n'))
+        p_details={
+            "name": Product_name,
+            "price": price,
+            'stock':stock
+        }
+        products.append(p_details)
+        print('\n product added successfully \n')
+    if choice==2:
+        tax=0.02
+        discount=0.03
+        for items in products:
+            if items['price']>=1000:
+                Discount=items['price']*discount
+                print(f'Your Discount is : {Discount}')
+            else:
+                print(f'there is no discount : {Discount}')
+            Tax=items['stock']*items['price']
+            Tax*=tax
+            print(f'Total tax on products is : {Tax}\n')
+    
+    if choice==3:
+        break
+    
+
+
