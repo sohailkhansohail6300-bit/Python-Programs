@@ -1,0 +1,53 @@
+invatory=[]
+print('invantory Managment System \n')
+
+while True:
+    print('Pressn 1 to add Products/Details')
+    print('Press 2 to views all Products Details')
+    print('Press 3 To salles Products')
+    print('Press 4 To Delete Products \n')
+
+    choice=int(input('Enter your Choice : '))
+
+    if choice==1:
+        P_name=input('Enter Product Name : ')
+        price=int(input('Enter product Price : '))
+        stock=int(input('Enter product Stock : '))
+        Total_Data={
+            'name':P_name,
+            'price':price,
+            'stock':stock
+        }
+        invatory.append(Total_Data)
+        print('Product Added Successfully\n')
+
+    if choice==2:
+        for i in invatory:
+            print(i)
+    Total_sell=0
+    
+    if choice==3:
+        a=input('Enter product Name : ')
+        b=int(input('Enter Product Quantity : '))
+
+        for i in invatory:
+            if i['name']==a:
+                if i['stock']>=b:
+                    i['stock']-=b
+                    print('Product Sold successfully : \n')
+                    Total_sell+=i['price']*i['stock']
+                    print(f'yor total sell is {Total_sell}')
+                else:
+                    print('You have Low Stock')
+            else:
+                print('We cannot find the Product')
+
+    if choice==4:
+        a=input('Enter Product Name : ')
+        for i in invatory:
+            if i['name']==a:
+                invatory.remove(i)
+                print('Product is deleted ')
+            else:
+                print('Product Not found')
+
