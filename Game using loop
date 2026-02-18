@@ -1,0 +1,16 @@
+#game using loop
+p_health=100
+enemy_health=100
+
+while p_health>0 and enemy_health>0:
+    attack=int(input('attack on enemy : '))
+    enemy_health-=attack
+    print(f'Enemy health {enemy_health}')
+    if enemy_health<=0:
+        print(f'You won the match')
+        break
+    e_atttack=10
+    p_health-=e_atttack
+    print(f'My Health health {p_health}')
+    if p_health<=0:
+        print(f'Enemy won the match')
