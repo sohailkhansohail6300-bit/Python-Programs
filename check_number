@@ -1,0 +1,10 @@
+
+while True:
+    num=input('entr the number or(q to quit): ')
+    if num == 'q':
+        break
+    a=int(num)
+    if a%2==0:
+        print(f'{a} is even number')
+    else:
+        print(f'{a} is odd number')
