@@ -1,0 +1,9 @@
+
+list1=['ali','ahmed','ali','ahmed','abid','abid']
+clean_data=[]
+for i in list1:
+    if i not in clean_data:
+        clean_data.append(i)
+print(f'duplicate data : {list1}')
+print(f'duplicate data removed : {clean_data}')
+
