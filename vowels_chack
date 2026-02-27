@@ -1,0 +1,9 @@
+
+vowels='aeiou'
+word=input('Enter a single word :')
+for i in word:
+    if i in vowels:
+        print(f'{i} is a vowel')
+    else:
+        print(f'{i} is not a vowel')
+        
