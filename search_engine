@@ -1,0 +1,9 @@
+
+data=['khan','ali','hassan','hussain','hussain ali1','hussain khan','hussain khan1']
+
+query=input('enter your search query : ').lower()
+for i in data:
+    if query.strip() in i:
+        print(f'your search query is : {i}')
+
+        
