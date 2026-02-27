@@ -1,0 +1,8 @@
+
+sentence='hello how are you doing todayyyyy'
+word=sentence.split()
+longest=''
+for i in word:
+    if len(i)>len(longest):
+        longest=i
+print(f'longest word is : {longest} and its lenght is : {len(longest)}')
