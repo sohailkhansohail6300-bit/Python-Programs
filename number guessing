@@ -1,0 +1,14 @@
+import random
+randoom=random.randint(1,10)
+for i in range(randoom):
+    guess_number=int(input('enter a number between 1 t0 10 : '))
+    if guess_number==randoom:
+        print(f'coreect guess : {guess_number}')
+        break
+    elif guess_number>randoom:
+        print(f'too heigh : {guess_number}')
+    elif guess_number<randoom:
+        print(f'too low : {guess_number}')
+    else:
+        print('enter a number between 1 to 10')
+        # break
